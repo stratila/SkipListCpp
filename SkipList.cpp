@@ -118,7 +118,7 @@ void SkipList::insert(int key, const std::string & val)
 			update[llevel - 1] = header;
 			lvl = llevel-1;
 		}
-		std::cout << "Insert level: " << lvl << '\n';
+		
 		Node* new_node = new Node{ key,val,lvl+1 };
 		for (int i = 0; i <= lvl; ++i) {
 			new_node->forward[i] = update[i]->forward[i];
